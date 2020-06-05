@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Text WinLoseText;
     public Image WinLoseBG;
     public GameObject winOrLose;
+    public bool isflat = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,25 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        #if UNITY_ANDROID
+        {
+
+        Vector3 tilt = Input.acceleration;
+
+        if(isflat)
+            // tilt = Quaternion.Euler(90,0,0) * tilt;
+        rb.AddForce(tilt.x * speed,0,tilt.y * speed);
+        }
+        // #endif
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menu");
+        }
+
+        // # if UNITY_STANDALONE_WIN
+        # else
+        {
+
         if(Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("menu");
@@ -36,6 +56,8 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3 (horizontalInput, 0.0f, verticalInput);
         
         rb.AddForce(movement * speed);
+        }
+        #endif
     }
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
