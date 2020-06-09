@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     // reference to our player controller
     public CharacterController player;  
     public float speed = 12f; 
-    public float gravity = -9.81f;
-    public float jumpH = 8f;
+    public float gravity = 18f;
+    public float jumpH = 9f;
     public Transform camera;
     Vector3 velocity;
     private Vector3 move = Vector3.zero;
@@ -39,13 +39,19 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            float initj = move.y;
+            // Debug.Log("move.y " + move.y);
+            // Debug.Log("initj" + initj);
             move = new Vector3(Input.GetAxis("Horizontal"), move.y, Input.GetAxis("Vertical"));
             move = camera.right * move.x + camera.forward * move.z;
-            Debug.Log("movcam " + move);
-           
+            
+            
             
             move = transform.TransformDirection(move);
-            
+            move.y = initj;
+            // Debug.Log("initj2 " + initj);
+            // Debug.Log("movey2 " + move.y);
+
             move.x *= speed;
             move.z *= speed;
             //Debug.Log("y" + y);
@@ -56,6 +62,11 @@ public class PlayerController : MonoBehaviour
         move.y += gravity * Time.deltaTime;
 
         player.Move(move * Time.deltaTime);
+
+        if (player.transform.position.y < -10)
+        {
+            transform.position = new Vector3(0, 20, 0);
+        }
         
     }
 }
