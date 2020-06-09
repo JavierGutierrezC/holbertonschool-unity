@@ -25,7 +25,8 @@ public class Timer : MonoBehaviour
 
         int minutes = ((int)time / 60);
         int seconds = ((int)time % 60);
-        float milsec = (time * 100 % 100);
+        float milsec = Mathf.Floor((time * 100 % 100));
+        Debug.Log("milsec" + milsec);
         // TimerText.text = string.Format(minutes + ":" + seconds + "." + milsec);
         TimerText.text = string.Format("{0}:{1:00}.{2:00}", minutes, seconds, milsec);
     }
