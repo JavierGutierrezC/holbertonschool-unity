@@ -10672,6 +10672,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 365728362334102894, guid: 383202fd18b5c184a892108c2410486d,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuText
+      objectReference: {fileID: 0}
+    - target: {fileID: 639657636305522895, guid: 383202fd18b5c184a892108c2410486d,
+        type: 3}
+      propertyPath: m_Name
+      value: RestartText
+      objectReference: {fileID: 0}
     - target: {fileID: 2360945814094210861, guid: 383202fd18b5c184a892108c2410486d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10785,7 +10795,7 @@ PrefabInstance:
     - target: {fileID: 2360945814094210865, guid: 383202fd18b5c184a892108c2410486d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2588484974383037723, guid: 383202fd18b5c184a892108c2410486d,
         type: 3}
@@ -10796,6 +10806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071401814500355952, guid: 383202fd18b5c184a892108c2410486d,
+        type: 3}
+      propertyPath: m_Name
+      value: ResumeText
       objectReference: {fileID: 0}
     - target: {fileID: 5537978616974443284, guid: 383202fd18b5c184a892108c2410486d,
         type: 3}
