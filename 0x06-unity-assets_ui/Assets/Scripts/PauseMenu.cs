@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update() 
     {
-         Debug.Log("update");
+        //  Debug.Log("update");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("escape");
@@ -22,25 +22,25 @@ public class PauseMenu : MonoBehaviour
             if (PausedGame)
             {
                 Resume();
-                Debug.Log("resume");
+                // Debug.Log("resume");
             }
             else
             {
                 Pause();
-                Debug.Log("pause");
+                // Debug.Log("pause");
             }
         }
     }
     public void Pause()
     {
-        Debug.Log("inpause");
+        // Debug.Log("inpause");
         PauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         PausedGame = true;
     }
     public void Resume()
     {
-        Debug.Log("inresume");
+        // Debug.Log("inresume");
         PauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         PausedGame = false;

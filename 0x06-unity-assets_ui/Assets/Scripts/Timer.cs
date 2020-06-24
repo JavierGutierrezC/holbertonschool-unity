@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text TimerText;
+    public Text FinalTimer;
     private float startTime;
     float time = 0.0f;
+    public GameObject TimeCanvas;
+    
     // Start is called before the first frame update
     public void Start()
     {
@@ -17,6 +20,10 @@ public class Timer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        CalcTime();
+    }
+    public string CalcTime()
     {
         time = Time.time - startTime;
         //  Debug.Log("Time.time"+ Time.time);
@@ -28,7 +35,13 @@ public class Timer : MonoBehaviour
         float milsec = Mathf.Floor((time * 100 % 100));
         // Debug.Log("milsec" + milsec);
         // TimerText.text = string.Format(minutes + ":" + seconds + "." + milsec);
-        TimerText.text = string.Format("{0}:{1:00}.{2:00}", minutes, seconds, milsec);
+        return(TimerText.text = string.Format("{0}:{1:00}.{2:00}", minutes, seconds, milsec));
+    }
+    public void Win()
+    {
+        Time.timeScale = 1f;
+        TimeCanvas.SetActive(false);
+        FinalTimer.text = CalcTime();
     }
     
 }
