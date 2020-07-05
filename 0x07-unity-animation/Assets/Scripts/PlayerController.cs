@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour
     Vector3 velocity;
     private Vector3 move = Vector3.zero;
     private float alt;
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -35,27 +37,22 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 move.y = jumpH;
+                anim.SetTrigger("Jump");
             }
         }
         else
         {
             float initj = move.y;
-            // Debug.Log("move.y " + move.y);
-            // Debug.Log("initj" + initj);
+    
             move = new Vector3(Input.GetAxis("Horizontal"), move.y, Input.GetAxis("Vertical"));
             move = camera.right * move.x + camera.forward * move.z;
             
             
-            
             move = transform.TransformDirection(move);
             move.y = initj;
-            // Debug.Log("initj2 " + initj);
-            // Debug.Log("movey2 " + move.y);
 
             move.x *= speed;
             move.z *= speed;
-            //Debug.Log("y" + y);
-            //Debug.Log("move.y" + move.y);
             
         }
         
@@ -67,6 +64,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0, 20, 0);
         }
-        
+        if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
+        {
+            anim.SetBool("Run",true);
+        }
+        else
+        {
+            anim.SetBool("Run",false);   
+        }
     }
 }

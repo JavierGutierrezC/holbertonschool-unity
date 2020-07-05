@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Else inverted");
+                // Debug.Log("Else inverted");
                 transform.position = player.transform.position + offset; 
             // offset.x = Mathf.Clamp(offset.x, 0, 80f); 
             }
@@ -52,7 +52,7 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Else notinverted");
+                // Debug.Log("Else notinverted");
                 transform.position = player.transform.position + offset; 
             // offset.x = Mathf.Clamp(offset.x, 0, 80f);
             } 
