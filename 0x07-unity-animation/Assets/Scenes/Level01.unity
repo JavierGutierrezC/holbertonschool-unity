@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400142, guid: b1c131bea78bcdf4d89844b2629a49d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.11
+      value: -1.051
       objectReference: {fileID: 0}
     - target: {fileID: 400142, guid: b1c131bea78bcdf4d89844b2629a49d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -428,6 +428,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: b1c131bea78bcdf4d89844b2629a49d2, type: 3}
       propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: b1c131bea78bcdf4d89844b2629a49d2, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8888,7 +8892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1726028073
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10975,16 +10979,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3131290166807820378}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f45ea7dd45040984596fcfc9d45779ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3131290166807820384}
-  speed: 12
+  speed: 5
   gravity: -20
   jumpH: 9
   camera: {fileID: 1726028075}
+  turnSmoothTime: 0.1
 --- !u!114 &3131290166807820380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10992,7 +10997,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3131290166807820378}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b0b097811f5f4342a7dbb9630956315, type: 3}
   m_Name: 
@@ -11400,7 +11405,7 @@ PrefabInstance:
     - target: {fileID: 8704489734573335414, guid: 8926283bcd5257a42965a7de12b70c48,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114896359637304290, guid: 8926283bcd5257a42965a7de12b70c48, type: 3}

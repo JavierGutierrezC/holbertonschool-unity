@@ -15,10 +15,13 @@ public class PlayerController : MonoBehaviour
     private float alt;
     Animator anim;
 
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent<CharacterController>();
+        //player = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
     }
 
@@ -28,7 +31,16 @@ public class PlayerController : MonoBehaviour
         if (player.isGrounded)
         {      
         move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        move = transform.TransformDirection(move);
+        
+        float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
+        Debug.Log("targetang" + targetAngle);
+        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+        // Vector3 movedir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.zero;
+        // player.Move(movedir.normalized * speed * Time.deltaTime);
+        //Debug.Log("movedir" + movedir);
+        //move = transform.TransformDirection(move);
         
         move = camera.right * move.x + camera.forward * move.z;
         move.y = 0f;
@@ -64,7 +76,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0, 20, 0);
         }
-        if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
+        if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
         {
             anim.SetBool("Run",true);
         }

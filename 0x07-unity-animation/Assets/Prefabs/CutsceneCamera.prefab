@@ -118,4 +118,4 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   player: {fileID: 0}
   timerCanvas: {fileID: 0}
-  cutCamera: {fileID: 8704489734573335414}
+  cutCamera: {fileID: 0}
