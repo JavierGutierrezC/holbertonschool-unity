@@ -3553,7 +3553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &836436550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9011,7 +9011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1726028073
 AudioListener:
   m_ObjectHideFlags: 0
@@ -11076,15 +11076,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3131290166807820378}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f45ea7dd45040984596fcfc9d45779ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3131290166807820384}
   speed: 5
-  gravity: -20
-  jumpH: 9
+  gravity: -17
+  jumpH: 11
   camera: {fileID: 1726028075}
   turnSmoothTime: 0.1
 --- !u!114 &3131290166807820380
@@ -11290,7 +11290,7 @@ PrefabInstance:
     - target: {fileID: 4694347144104499712, guid: d5c04db710a91c548ac67bde325aca3c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4694347144104499716, guid: d5c04db710a91c548ac67bde325aca3c,
         type: 3}

@@ -30,10 +30,12 @@ public class PlayerController : MonoBehaviour
     {
         if (player.isGrounded)
         {      
+        anim.SetBool("ground", true);
+        anim.SetBool("falling", false);
+        anim.SetBool("Run", false);
         move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         
         float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
-        Debug.Log("targetang" + targetAngle);
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
@@ -57,10 +59,17 @@ public class PlayerController : MonoBehaviour
             float initj = move.y;
     
             move = new Vector3(Input.GetAxis("Horizontal"), move.y, Input.GetAxis("Vertical"));
+        //     float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
+        // float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        // transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+       
+        //move = transform.TransformDirection(move);
+           
             move = camera.right * move.x + camera.forward * move.z;
             
             
-            move = transform.TransformDirection(move);
+            //move = transform.TransformDirection(move);
             move.y = initj;
 
             move.x *= speed;
@@ -74,15 +83,21 @@ public class PlayerController : MonoBehaviour
 
         if (player.transform.position.y < -10)
         {
-            transform.position = new Vector3(0, 20, 0);
+            transform.position = new Vector3(0, 30, 0);
+           // anim.SetTrigger("fall");
+            anim.SetBool("Run",true);
+            anim.SetBool("ground",false);
+            anim.SetBool("falling",true);
+            Debug.Log("falling");
         }
+
         if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
         {
             anim.SetBool("Run",true);
         }
         else
         {
-            anim.SetBool("Run",false);   
+            //anim.SetBool("Run",false);   
         }
     }
 }
