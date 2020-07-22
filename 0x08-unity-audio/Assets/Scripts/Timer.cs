@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     private float startTime;
     float time = 0.0f;
     public GameObject TimeCanvas;
+    public AudioSource CM;
+    public AudioSource VP;
     
     // Start is called before the first frame update
     public void Start()
@@ -42,6 +44,8 @@ public class Timer : MonoBehaviour
         Time.timeScale = 1f;
         TimeCanvas.SetActive(false);
         FinalTimer.text = CalcTime();
+        CM.Stop();
+        VP.Play();
     }
     
 }
