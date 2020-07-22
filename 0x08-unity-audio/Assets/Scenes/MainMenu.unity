@@ -336,7 +336,8 @@ AudioSource:
   m_GameObject: {fileID: 302010636}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243239238492205992, guid: dccae3bb012103d42b4013faa877a904,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: a6fbb7b32fd4dd4428a642b6726f8ac4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1704,6 +1705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MenuSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784111282221436994, guid: a52357cb09698ff4fa55f07b58c9cf91,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a52357cb09698ff4fa55f07b58c9cf91, type: 3}
