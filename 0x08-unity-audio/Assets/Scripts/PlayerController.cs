@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Run",true);
             anim.SetBool("ground",false);
             anim.SetBool("falling",true);
-            Debug.Log("falling");
+            //Debug.Log("falling");
         }
 
         if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
@@ -99,5 +100,11 @@ public class PlayerController : MonoBehaviour
         {
             //anim.SetBool("Run",false);   
         }
+        
     }
+    public bool Grounded()
+    {
+        return player.isGrounded;
+    }
+    
 }

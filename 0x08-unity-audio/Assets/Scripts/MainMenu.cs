@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
    public void QuitGame()
    {
        //PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
-       Debug.Log("Exited");
+      //Debug.Log("Exited");
        Application.Quit();
    } 
    public void PreviousScene()

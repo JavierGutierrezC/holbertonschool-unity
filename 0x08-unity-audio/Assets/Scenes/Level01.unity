@@ -1602,6 +1602,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: e36b62b428100fe4da9783ef826f92b1, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e36b62b428100fe4da9783ef826f92b1, type: 3}
       propertyPath: m_Name
       value: Island left winter5
@@ -2318,6 +2322,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: 46c230afe55e26f4ab86fe065b3d1420, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 46c230afe55e26f4ab86fe065b3d1420, type: 3}
       propertyPath: m_Name
       value: Island left winter3
@@ -3102,6 +3110,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: 5b17a49237e00074cbc352cf5405ee85, type: 3}
+      propertyPath: m_TagString
+      value: grass
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 5b17a49237e00074cbc352cf5405ee85, type: 3}
       propertyPath: m_Name
       value: naturePack_015
@@ -3170,6 +3182,124 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 597752492}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &618326829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7873658914367398915, guid: af762d7a802994d4698bf9d37b585a8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7873658914381596666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &618326831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618326829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68e6e40e35aef4c9d5ade24d6d38cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassFX: {fileID: 8300000, guid: db6dacda0bbeccf4bafb6c5d6949d45a, type: 3}
+  rockFX: {fileID: 8300000, guid: 8e38f751db999634e9d2df02d1587af2, type: 3}
+  player: {fileID: 3131290166807820378}
+--- !u!82 &618326833
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618326829}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243230659233213716, guid: dccae3bb012103d42b4013faa877a904,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: db6dacda0bbeccf4bafb6c5d6949d45a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &620623521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3177,6 +3307,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: ac2c49e2a3b65504e8535074ae98947e, type: 3}
+      propertyPath: m_TagString
+      value: grass
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: ac2c49e2a3b65504e8535074ae98947e, type: 3}
       propertyPath: m_Name
       value: Island left1
@@ -4171,6 +4305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 1512296653}
   PausedGame: 0
+  paused: {fileID: 245467411148700020, guid: dccae3bb012103d42b4013faa877a904, type: 2}
+  unPaused: {fileID: 24500006, guid: dccae3bb012103d42b4013faa877a904, type: 2}
 --- !u!4 &873751797
 Transform:
   m_ObjectHideFlags: 0
@@ -5440,6 +5576,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: 8762ed90cfc43514896e7867b775702d, type: 3}
+      propertyPath: m_TagString
+      value: grass
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 8762ed90cfc43514896e7867b775702d, type: 3}
       propertyPath: m_Name
       value: Island left4
@@ -5575,6 +5715,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: cd556b6e5ecf0a742a95d7e2e612ecfa, type: 3}
+      propertyPath: m_TagString
+      value: grass
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: cd556b6e5ecf0a742a95d7e2e612ecfa, type: 3}
       propertyPath: m_Name
       value: Start
@@ -5647,6 +5791,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2.6485
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: cd556b6e5ecf0a742a95d7e2e612ecfa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd556b6e5ecf0a742a95d7e2e612ecfa, type: 3}
 --- !u!1001 &1138460294
@@ -5659,6 +5807,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: ea74d54d05470dc4ebf233acfd015607, type: 3}
       propertyPath: m_Name
       value: Island left3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea74d54d05470dc4ebf233acfd015607, type: 3}
+      propertyPath: m_TagString
+      value: grass
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ea74d54d05470dc4ebf233acfd015607, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6005,6 +6157,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 46c230afe55e26f4ab86fe065b3d1420, type: 3}
       propertyPath: m_Name
       value: Island left winter
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 46c230afe55e26f4ab86fe065b3d1420, type: 3}
+      propertyPath: m_TagString
+      value: stone
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 46c230afe55e26f4ab86fe065b3d1420, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7213,6 +7369,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: c668bb30e506aed44a35aab2017bd9e8, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c668bb30e506aed44a35aab2017bd9e8, type: 3}
       propertyPath: m_Name
       value: Island left winter4
@@ -7496,6 +7656,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: c10eed76aacd3ac46a7de6ebbfdb0496, type: 3}
+      propertyPath: m_TagString
+      value: grass
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c10eed76aacd3ac46a7de6ebbfdb0496, type: 3}
       propertyPath: m_Name
       value: Island left
@@ -9646,6 +9810,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: 1d42324c0ddb5044499b231fe458c502, type: 3}
+      propertyPath: m_TagString
+      value: grass
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1d42324c0ddb5044499b231fe458c502, type: 3}
       propertyPath: m_Name
       value: Island left2
@@ -10651,6 +10819,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: cd4b6ebd92a04e648b3c46a6a8c83a60, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: cd4b6ebd92a04e648b3c46a6a8c83a60, type: 3}
       propertyPath: m_Name
       value: Island left winter2
@@ -11276,6 +11448,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1725598341}
     m_Modifications:
+    - target: {fileID: 100000, guid: 46eb25a5b2e56b04088ed70732e7237d, type: 3}
+      propertyPath: m_TagString
+      value: grass
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 46eb25a5b2e56b04088ed70732e7237d, type: 3}
       propertyPath: m_Name
       value: Island left5

@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseCanvas;
     public bool PausedGame = false;
+    public AudioMixerSnapshot paused;
+    public AudioMixerSnapshot unPaused;
     
     // MainMenu MainMenuScript;
 
@@ -17,7 +21,7 @@ public class PauseMenu : MonoBehaviour
         //  Debug.Log("update");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("escape");
+            //Debug.Log("escape");
 
             if (PausedGame)
             {
@@ -37,6 +41,7 @@ public class PauseMenu : MonoBehaviour
         PauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         PausedGame = true;
+        paused.TransitionTo(0.01f);
     }
     public void Resume()
     {
@@ -44,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         PauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         PausedGame = false;
+        unPaused.TransitionTo(0.01f);
     }
     public void Restart()
     {

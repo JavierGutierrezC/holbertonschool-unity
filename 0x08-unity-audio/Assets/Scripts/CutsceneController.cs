@@ -13,17 +13,17 @@ public class CutsceneController : MonoBehaviour
     void awake()
     {
         anim = GetComponent<Animator>();
-        Debug.Log("awake");
+        //Debug.Log("awake");
     }
 
     void StartGame()
     {
-        Debug.Log("brfore transition");
+        //Debug.Log("brfore transition");
         cutCamera.SetActive(false);
         mainCamera.SetActive(true);
         timerCanvas.SetActive(true);
         player.gameObject.GetComponent<PlayerController>().enabled = true;
         
-        Debug.Log("after trans");
+        //Debug.Log("after trans");
     }
 }
