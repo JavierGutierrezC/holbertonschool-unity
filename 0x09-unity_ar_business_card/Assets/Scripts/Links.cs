@@ -4,19 +4,44 @@ using UnityEngine;
 
 public class Links : MonoBehaviour
 {
+    public AudioSource buttonSound;
     public void Twitter()
     {
-        Application.OpenURL("https://twitter.com/javiguti11");
+        SoundFX();
+        Invoke("twitlink", 1);
     }
     public void GitHub()
     {
-        Application.OpenURL("https://github.com/JavierGutierrezC");
+        SoundFX();
+        Invoke("gitlink", 1);
     }
     public void Mail()
     {
-        Application.OpenURL("mailto:955@holbertonschool.com");
+        SoundFX();
+        Invoke("maillink", 1);
     }
     public void Linkdin()
+    {
+        SoundFX();
+        Invoke("idnlink", 1);
+    }
+    public void SoundFX()
+    {
+        buttonSound.Play();
+    }
+    public void twitlink()
+    {
+        Application.OpenURL("https://twitter.com/javiguti11");
+    }
+    public void gitlink()
+    {
+        Application.OpenURL("https://github.com/JavierGutierrezC");
+    }
+    public void maillink()
+    {
+        Application.OpenURL("mailto:955@holbertonschool.com");
+    }
+    public void idnlink()
     {
         Application.OpenURL("https://www.linkedin.com/in/javier-gutierrez-59a492161/");
     }
