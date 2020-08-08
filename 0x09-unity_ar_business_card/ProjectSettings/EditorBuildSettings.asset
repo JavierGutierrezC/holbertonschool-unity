@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SamplesResources/Scenes/0-Main.unity
-    guid: a09cb257d566c489595b16ab37547666
+    path: Assets/Scenes/ARBusinessCard.unity
+    guid: c2960b38e9e655442a3273c5f3d18d56
   m_configObjects: {}
